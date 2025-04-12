@@ -1,0 +1,19 @@
+{
+    "manifest_version": 3,
+    "name": "InstaSafe",
+    "version": "1.0",
+    "permissions": ["scripting", "activeTab"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["*://*.instagram.com/*"],
+        "js": ["content.js"]
+      }
+    ],
+    "action": {
+      "default_popup": "popup.html"
+    }
+  }
+  
